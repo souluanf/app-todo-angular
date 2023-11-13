@@ -15,4 +15,19 @@ export class TodoListComponent {
     {task: 'Task 5', checked: false},
   ];
 
+  public deleteTaskById(event: number): void {
+    this.taskList.splice(event, 1);
+  }
+
+  public deleteAllTasks(): void {
+    const confirm = window.confirm('Você realmente deseja excluir todas as tarefas?');
+    if (confirm) {
+      this.taskList = [];
+    }
+  }
+
+  public addTask(event: string): void {
+    this.taskList.push({task: event, checked: false});
+  }
+
 }
