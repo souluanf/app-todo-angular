@@ -7,13 +7,7 @@ import {TaskList} from "../../model/task-list";
   styleUrl: './todo-list.component.scss'
 })
 export class TodoListComponent {
-  public taskList: Array<TaskList> = [
-    {task: 'Task 1', checked: false},
-    {task: 'Task 2', checked: false},
-    {task: 'Task 3', checked: false},
-    {task: 'Task 4', checked: true},
-    {task: 'Task 5', checked: false},
-  ];
+  public taskList: Array<TaskList> = [];
 
   public deleteTaskById(event: number): void {
     this.taskList.splice(event, 1);
@@ -26,7 +20,7 @@ export class TodoListComponent {
     }
   }
 
-  public addTask(event: string): void {
+  public setEmittedTaskList(event: string): void {
     this.taskList.push({task: event, checked: false});
   }
 
