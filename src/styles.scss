@@ -1,4 +1,4 @@
-@import "./dist/scss/variaveis.scss";
+@import "./dist/scss/variables.scss";
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
 * {
@@ -8,12 +8,23 @@
   font-weight: 400;
 }
 
-body {
-  background-color: $primary-background-color;
+body{
+  background: $primary-background-color;
 }
 
-// Classes
-.container {
+ul{
+  list-style: none;
+}
+
+textarea:focus, input:focus, button{
+  outline: none;
+}
+
+button{
+  cursor: pointer;
+}
+
+.container{
   width: 350px;
   margin: 50px auto;
 }
